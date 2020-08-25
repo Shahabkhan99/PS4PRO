@@ -97,9 +97,9 @@ line-height:265px;font-family:'Icons';font-size:160px;text-align:center;color:wh
 text-shadow:-3px 3px 5px black;
 }
 #CacheProgress {
-position:fixed;left:0;right:0;top:0px;bottom:30px;max-width:100%;max-height:100%;margin:auto;
+position:fixed;left:0;right:0;top:0px;bottom:300px;max-width:100%;max-height:100%;margin:auto;
 width:1076px;height:8px;
-background:url("img/Flash.jpg");box-shadow:0 0 0 2px #BBCEEF;
+background-color:transparent; box-shadow:0 0 0 2px #BBCEEF;
 }
 #CacheBar {
 width:0%;height:100%;background-color:white;
