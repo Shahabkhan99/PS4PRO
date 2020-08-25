@@ -111,7 +111,7 @@ background:url("img/Flash.jpg"); background-position: center center; background-
 opacity:1;display:none;z-index:900;
 }
 .cacheUPD {
-position:fixed;left:30%;right:70%;top:800px;bottom:10px;max-width:100%;max-height:100%;margin:auto;	
+position:fixed;left:10%;right:70%;top:800px;bottom:10px;max-width:100%;max-height:100%;margin:auto;	
 width:900px;height:400px;
 line-height:30px;align-items:left;
 font-family:sans-serif;font-size:26px;text-align:left;color:white;z-index:901;
