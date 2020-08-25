@@ -60,7 +60,7 @@ html{}body{
 }
 
 #InfoButton{
-position:absolute;bottom:10px;right:15px;font-size:18px;font-weight:bold;display:inline-block;z-index:1;
+position:absolute;bottom:10px;right:250px;font-size:18px;font-weight:bold;display:inline-block;z-index:1;
 }
 #R1BUTTON{
 display:inline-block;vertical-align:middle;height:20px;width:25px;margin-right:6px;
