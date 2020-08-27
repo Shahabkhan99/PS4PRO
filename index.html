@@ -1,9 +1,10 @@
-<html manifest="offline.cache"> 
+<html> <!-- manifest="offline.cache"> -->
 <head> 
 <title></title>
 <link rel="stylesheet prefetch" href="files/style2.css">
 </head>
-<body style= "color:white;">
+<body style="size:auto; height:auto; background:url('./files/img/10.jpg') no-repeat; background-size: cover; color:white;">
+
 <div id=ScrOverlay class=cacheUPDbg><pre id=cacheUPDtxt class=cacheUPD></pre><div id=CacheProgress><div id=CacheBar></div></div></div>
 <input autofocus="autofocus" type="range" id="NOUP" style="opacity:0;display:none;">
 <div id=SubTabA class=SubTabTxtAnim></div><div id=SubTabB class=SubTabLineAnim></div>
@@ -11,8 +12,12 @@
 <div id=Popup onclick="Popup.classList.remove('animation');"><div id="PopIcon"></div><div id="PopTitle"></div></div>
 <div id=BottomPopup></div>
 <div id=InfoButton><div id=R1BUTTON></div>= Show Payload Info</div>
+<!--<div id=AutoHenInfo><div id=L2BUTTON></div>- AutoHen</div>
+<div id=MenuContainer class=MenuContainer onclick=GetInfo()>
+<div id=MainMenu class=MenuPos> >  -->
 
-<div id="SLIDE_BG"></div>       
+<div id="SLIDE_BG"></div>     
+
 
 <!-- ==========Main Menu items=========== -->
 <div id=MenuContainer class=MenuContainer onclick=GetInfo()>
@@ -20,37 +25,37 @@
 
 <div  PL-Title="Extras"         PL-Bin="SUBMENU 1"         PL-Ver=""             PL-Desc="Extras" class="Box Icon2"><img src="files/img/psn.png"></div
   
-><div  PL-Title="FTP"              PL-Bin="FTP.bin"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/ftp.png"></div
+><div  PL-Title="FTP"          PL-Bin onclick="load_ftp(); return false";     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/ftp.png"></div
 
-><div PL-Title="Hen"              PL-Bin="Hen213.bin" PL-Ver="v2.1.3 - By SiSTRo" PL-Desc="Enable Homebrew, Enable Debug Settings, Enable External HDD Support, <br>PSVR Support via Firmware Spoof to v7.02, Remote PKG Installer Support, <br>Full Rest Mode Support, 7.xx External HDD Support, Debug Trophies Support."  class="Box Icon"><img src="files/img/hen.png"></div
+><div PL-Title="Hen"    PL-Bin onclick="load_exploit_HEN(); return false" 
+PL-Ver="v2.1.3 - By SiSTRo" PL-Desc="Enable Homebrew, Enable Debug Settings, Enable External HDD Support, <br>PSVR Support via Firmware Spoof to v7.02, Remote PKG Installer Support, <br>Full Rest Mode Support, 7.xx External HDD Support, Debug Trophies Support."  class="Box Icon"><img src="files/img/hen.png"></div
 
-><div PL-Title="Mira"            PL-Bin="Mira.bin"    PL-Ver="v1.0 - By OpenOrbis"        PL-Desc="Enable Mira framework.<br>Kernel Logging Server Port: 9998<br>RPC Server Port: 9999" class="Box Icon"><img src="files/img/mira.png"></div
+><div PL-Title="Mira"            PL-Bin onclick="load_exploit_mira(); return false"    PL-Ver="v1.0 - By OpenOrbis"        PL-Desc="Enable Mira framework.<br>Kernel Logging Server Port: 9998<br>RPC Server Port: 9999" class="Box Icon"><img src="files/img/mira.png"></div
 
-><div PL-Title="Ren"            PL-Bin="PS4ren.bin"   PL-Ver="v1.0 - By SiSTRo"       PL-Desc="PS4 Remote Play Enabler.<br><br>Use this to allow you to register a device for remote play.<br>NOTE: The PS button is disabled during use so use the Circle button to return to the home menu." class="Box Icon2"><img src="files/img/ren.png"></div
+><div PL-Title="Ren"            PL-Bin onclick="load_exploit_mira_ren(); return false"   PL-Ver="v1.0 - By SiSTRo"       PL-Desc="PS4 Remote Play Enabler.<br><br>Use this to allow you to register a device for remote play.<br>NOTE: The PS button is disabled during use so use the Circle button to return to the home menu." class="Box Icon2"><img src="files/img/ren.png"></div
 
-><div PL-Title="Disable Updates" PL-Bin="UpdatesDisable.bin" PL-Ver="v1.0 - By Al Azif"                PL-Desc="Creates dummy files in the PS4 update folder to prevent the download of unwanted system updates.<br>It also deletes any existing updates if they already exist.<br><br>! You only ever have to run this once !" class="Box Icon">&#xf771;</div
+><div  PL-Title="Disable Update"        PL-Bin onclick="load_updatesdisable(); return false" 
+PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/DU.png"></div
 
-><div PL-Title="Fan Control"      PL-Bin=""           PL-Ver="v4.0 - By Leeful"   PL-Desc="Set the desired temperature that the PS4 fan starts.<br>You can move the slider by using the D-Pad Up & Down or Left & Right.<br>The value you set will remain until the power is removed from the PS4.<br><br>The default PS4 setting is 79&#176;" class="Box Icon"><img src="files/img/FanControl.png"></div
+><div  PL-Title="Enable Update"      PL-Bin onclick="load_updatesenable(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/EU.png"></div
 
-><div  PL-Title="Backup Data"              PL-Bin="pl_dbBackup.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/BD.png"></div
+><div  PL-Title="History Blocker"              PL-Bin onclick="load_historyblock(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/H.png"></div
 
-><div  PL-Title="Restore Data"              PL-Bin="pl_dbRestore.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/RD.png"></div
+><div  PL-Title="Backup Data"              PL-Bin onclick="load_dbBackup(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/BD.png"></div
 
-><div  PL-Title="Dump Game"              PL-Bin="pl_dumper.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/CB.png"></div
+><div  PL-Title="Restore Data"              PL-Bin onclick="load_dbRestore(); return false"      PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/RD.png"></div
 
-><div  PL-Title="DEX"              PL-Bin="pl_ToDEX.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/DEX.png"></div
+><div  PL-Title="Dump Game"              PL-Bin onclick="load_dumper(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/CB.png"></div
 
-><div  PL-Title="Disable Update"              PL-Bin="pl_updateDisable.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/DU.png"></div
+><div  PL-Title="ToDEX"              PL-Bin onclick="load_todex(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/DEX.png"></div
 
-><div  PL-Title="Enable Update"              PL-Bin="pl_updateEnable.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/EU.png"></div
+><div  PL-Title="Kernel Dump"              PL-Bin onclick="load_kerneldump(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/Kernel.png"></div
 
-><div  PL-Title="History Blocker"              PL-Bin="pl_historyBlocker.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/H.png"></div
+><div  PL-Title="WebRTE"              PL-Bin onclick="load_webrte(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/RTE.png"></div
 
-><div  PL-Title="Kernel Dump"              PL-Bin="kernelDumper.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/Kernel.png"></div
+><div  PL-Title="App To USB"              PL-Bin onclick="load_app2usb(); return false"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/USB.png"></div
 
-><div  PL-Title="RTE"              PL-Bin="pl_WebRTE.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/RTE.png"></div
-
-><div  PL-Title="USB App"              PL-Bin="pl_app2usb.js"     PL-Ver="v1.3.2 - By LightningMods"  PL-Desc="A full access FTP server for the PS4. Connect your FTP client to the IP address that the popup message tells you. The FTP port number is 1337." class="Box Icon"><img src="files/img/USB.png"></div
+><div PL-Title="Fan Control"      PL-Bin onclick="load_fanthresh(); return false"       PL-Ver="v4.0 - By Leeful"   PL-Desc="Set the desired temperature that the PS4 fan starts.<br>You can move the slider by using the D-Pad Up & Down or Left & Right.<br>The value you set will remain until the power is removed from the PS4.<br><br>The default PS4 setting is 79&#176;" class="Box Icon"><img src="files/img/FanControl.png"></div
 
 ><div PL-Title="Info"           PL-Bin="INFO"              PL-Ver=""             PL-Desc="Linux Info & Credits." class="Box Icon2">&#xf30f;</div
 
@@ -61,7 +66,7 @@
 <div id=SubMenu1Container class=SubMenuContainer style=display:none onclick=GetInfo()>
 <div id=SubMenu1 class=SubMenuPos>
 
-<div PL-Title="Bin Loader"       PL-Bin="BINLOADER"  PL-Ver="v1.0 - By Specter"  PL-Desc="Loads a bin file sent to the PS4 IP address on port 9020.<br><br>This version of Bin Loader can also load extra large bin files up to 12.58MB in size." class="Box Icon">&#xf019;</div
+<div PL-Title="Bin Loader"       PL-Bin onclick="load_exploit(); return false"   PL-Ver="v1.0 - By Specter"  PL-Desc="Loads a bin file sent to the PS4 IP address on port 9020.<br><br>This version of Bin Loader can also load extra large bin files up to 12.58MB in size." class="Box Icon">&#xf019;</div
 
 ><div PL-Title="Linux 5.3.18" 	    PL-Bin="Linuxgentoo.bin"   PL-Ver="kernel 5.3.18" PL-Desc="Linux Gentoo with Gentoo-Sources Kernel.<br><br>vram: 2GB<br><br>Autoboot: yes" class="Box Icon"><extra></extra><img src="files/img/Linux.png"></div
 
@@ -83,6 +88,145 @@
 <div id=SpoFW class=Info2></div>
 <div id=FanTemp class=Info1></div>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%">
+
+<h1 id=msgs style='font-size:25px;text-align:center;'>6.72 Exploit Menu Pro</h1>
+
+<img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%"><img src="./files/img/ps4.png" alt="ps4" style="width:2%">
+
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+
+<script src="./files/exp_common.js"></script>
+<script src="./files/exp_jailbreak.js"></script>
+
+<script>
+function load_exploit(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit ...</h1>";
+setTimeout(jailbreak,500);
+}
+
+function load_exploit_HEN(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + HEN ...</h1>";
+LoadedMSG="Exploit + HEN Loaded ✔";ExploitMira="HEN";MiraSRC="./files/pl_HEN.js";
+setTimeout(jailbreak,500);
+}
+
+function load_exploit_mira(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + Mira ...</h1>";
+LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="./files/pl_mira.js";
+setTimeout(jailbreak,500);
+}
+
+function load_exploit_mira_ren(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + Mira ...</h1>";
+LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="./files/pl_mira_ren.js";
+setTimeout(jailbreak,500);
+}
+
+function load_binloader(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Bin Loader ...</h1>";
+LoadedMSG="Send Payload To Port 9021";
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_ftp(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading FTP ...</h1>";
+LoadedMSG="FTP Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_ftp.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_dumper(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Dumper ...</h1>";
+LoadedMSG="Dumper Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_dumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_linux(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Linux ...</h1>";
+LoadedMSG="Linux Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_linux.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_app2usb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading AppToUSB ...</h1>";
+LoadedMSG="AppToUSB Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_app2usb.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_kerneldump(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Kernel Dumper ...</h1>";
+LoadedMSG="Kernel Dumper Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_kernelDumper.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_webrte(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading WebRTE ...</h1>";
+LoadedMSG="WebRTE Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_WebRTE.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_todex(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading ToDEX ...</h1>";
+LoadedMSG="ToDEX Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_ToDEX.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_historyblock(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading History Blocker ...</h1>";
+LoadedMSG="History Blocker Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_historyBlocker.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_updatesdisable(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Disable Updates ...</h1>";
+LoadedMSG="Disable Updates Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_updatesDisable.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_updatesenable(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Enable Updates ...</h1>";
+LoadedMSG="Enable Updates Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_updatesEnable.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_dbBackup(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading DB Backup ...</h1>";
+LoadedMSG="Data Backup Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_dbBackup.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_dbRestore(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading DB Restore ...</h1>";
+LoadedMSG="Data Restore Loaded ✔";
+var script = document.createElement('script');script.src = "./files/pl_dbRestore.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+function load_fanthresh(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Fan Threshold ...</h1>";
+LoadedMSG="Fan Threshold Loaded ✔";fanTemp=tempC.value;//alert(fanTemp);
+var script = document.createElement('script');script.src = "./files/pl_fanthresh.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+</script>
+
 <script>
 var SS=sessionStorage;var LS=localStorage;var CC=createCookie;var RC=readCookie;function createCookie(name,value,days){if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));var expires="; expires="+date.toGMTString();}else
 expires="";document.cookie=name+"="+value+expires;}
@@ -97,7 +241,7 @@ if(LS.CurrentTemp==null){LS.CurrentTemp=79;}
 if(RC('KernEpochDiff')==null){CC('KernEpochDiff',LS.KernEpochDiff,365);}
 if(RC('CurrentTemp')==null){CC('CurrentTemp',LS.CurrentTemp,365);}
 window.onunload=function(e){CC("CurrentTemp",LS.CurrentTemp,365);CC("KernEpochDiff",LS.KernEpochDiff,365);};var UA=navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (")+19,navigator.userAgent.indexOf(") Apple"));if(LS.TrueFW==null){if(UA=="5.05"||UA=="5.07"){LS.TrueFW=(Number(UA));}else{LS.TrueFW="Spoofed";}}
-function ShowFirmwareVer(){OffFW.style.display='block';SpoFW.style.display='block';if(LS.TrueFW==null){if(UA=="5.05"||UA=="5.07"){LS.TrueFW=(Number(UA));OfficialFW=LS.TrueFW;}else{LS.TrueFW="Spoofed";OfficialFW=LS.TrueFW;}}else{OfficialFW=LS.TrueFW;}
+function ShowFirmwareVer(){OffFW.style.display='block';SpoFW.style.display='block';if(LS.TrueFW==null){if(UA=="5.05"||UA=="6.72"){LS.TrueFW=(Number(UA));OfficialFW=LS.TrueFW;}else{LS.TrueFW="Spoofed";OfficialFW=LS.TrueFW;}}else{OfficialFW=LS.TrueFW;}
 ReportedFW=UA;OfficialFW=LS.TrueFW;if(OfficialFW==ReportedFW){OffFW.innerHTML=("Official Firmware v"+OfficialFW+" detected");}else{OfficialFW=LS.TrueFW;OffFW.innerHTML=("Official Firmware: v"+OfficialFW);SpoFW.innerHTML=("Currently Spoofed To: v"+ReportedFW);}
 if(isNaN(ReportedFW)){OffFW.innerHTML=("NO PS4 DETECTED");}
 if(OfficialFW=="Spoofed"&&!isNaN(UA)){OffFW.innerHTML=("Incorrect Firmware Version Detected!");SpoFW.innerHTML="Please Reboot your Console!";alert("Incorrect firmware value identified!\n\nIt appears that you have deleted the cache after using a firmware spoof.\n\nTo set the correct firmware version and remove this message please reboot the console.");localStorage.removeItem("TrueFW");}}
@@ -106,6 +250,7 @@ function ShowTimeAndDate(){var Kdate=new Date();Kdate.setTime(Kdate.getTime()+ -
 function HideTimeAndDate(){Clock.style.display='none';Ktime.style.display='none';}
 function ShowFanTemp(){FanTemp.style.display='block';FanTemp.innerHTML='Current Fan Control Threshold Setting: <font color="yellow">'+RC('CurrentTemp')+'&#176;</font>';}
 function HideFanTemp(){FanTemp.style.display='none';}
+
 var MMc=MainMenu.childElementCount;var MMtotal=MMc;var SM1t='Extras';var SM1n=1;var SM1c=SubMenu1.childElementCount;var SM1total=MMc+SM1c;function GenerateSubMenuChildernCount(){SM1z=parseInt(SS.ItemNum-1-MMc);}
 if(sessionStorage.length!=0&&SS.LastPage==null){if(SS.MainMenu==1){window.MainMenu.children[SS.ItemNum-1].className="SelectedItem Icon";window.MainMenu.style.left=SS.ItemPos+'px';ChangeText(window.MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));}else if(SS.SubMenu==1){SS.MainMenu=1;SS.ItemNum=SS.LastSubMenu1ItemNum;FocusSubMenu1();UpdateMenu();}}
 if(sessionStorage.length!=0&&SS.LastPage!=null){InfoBox.style.display='block';Title.style.display='none';IBT=ChangeInfoBoxTitle;IBV=ChangeInfoBoxVer;IBD=ChangeInfoBoxDesc;if(SS.MainMenu==1){MainMenu.children[SS.ItemNum-1].opacity="1";MainMenu.children[SS.ItemNum-1].className="SelectedItem Icon";MainMenu.style.left=SS.ItemPos+'px';IBT(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));IBV(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Ver'));IBD(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Desc'));}else if(SS.SubMenu==1){SS.MainMenu=0;SS.ItemNum=SS.LastSubMenu1ItemNum;FocusSubMenu1();UpdateMenu();SubMenu1.children[SM1z].opacity="1";SubMenu1.children[SM1z].className="SelectedItem Icon";SubTabA.style.display='none';SubTabB.style.display='none';IBT(SubMenu1.children[SM1z].getAttribute('PL-Title'));IBV(SubMenu1.children[SM1z].getAttribute('PL-Ver'));IBD(SubMenu1.children[SM1z].getAttribute('PL-Desc'));}
@@ -122,8 +267,10 @@ function UpdateSubMenu(){setTimeout(function(){GenerateSubMenuChildernCount();if
 UpdateTitle();},0);}
 function UNFocusSubMenu(){if(SS.SubMenu==1){SubMenu1.children[SM1z].className="Box2 Icon";SubMenu1Container.className="SubMenuContainer";SS.ItemNum=SM1n;}
 MenuContainer.className="MenuContainer2";SubTabA.className="SubTabTxtAnim";SubTabB.className="SubTabLineAnim";SS.SubMenu=0;if(SS.MainMenu==1){ChangeText(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));}else if(SS.SubMenu==1){ChangeText(SubMenu1.children[SM1z].getAttribute('PL-Title'));}}
-function LoadPayload(){Loader.innerHTML='<object type="text/html" data="files/exploit.html" style="width:263px; height:56px;"></object>';}
-function loadPage(){SS.LastPage='files/exploit.html';if(Title.innerHTML=='Hen'){SS.ThisIsHen='1';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}else if(Title.innerHTML=='Patch PS4 Kernel'){SS.ThisIsKernelPatch='1';LoadPayload();}else if(Title.innerHTML=='Bin Loader'){SS.ThisIsBinLoader='1';LoadPayload();}else if(Title.innerHTML=='Mira'){SS.ThisIsMira='1';SS.Payload='Mira.bin';LoadPayload();}else if(Title.innerHTML=='Fan Control'){SS.ThisIsFanControl='1';SS.LastPage='files/FanControlLoader.html';Loader.innerHTML='<object type="text/html" data="files/FanControlLoader.html" style="width:265px; height:56px;"></object>';}else if(Title.innerHTML=='Info'){SS.ThisIsInfo='1';SS.LastPage='files/Info.html';ScrOverlay.style.opacity="1";ScrOverlay.style.display="block";ScrOverlay.innerHTML='<object type="text/html" data="files/Info.html" style="width:100%; height:100%;"></object>';}
+
+
+function LoadPayload(){Loader.innerHTML='<object type="text/html/js" data="files/exploit.js" style="width:263px; height:56px;"></object>';}
+function loadPage(){SS.LastPage='files/exploit.js';if(Title.innerHTML=='Hen'){SS.ThisIsHen='1';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}else if(Title.innerHTML=='Patch PS4 Kernel'){SS.ThisIsKernelPatch='1';LoadPayload();}else if(Title.innerHTML=='Bin Loader'){SS.ThisIsBinLoader='1';LoadPayload();}else if(Title.innerHTML=='Mira'){SS.ThisIsMira='1';SS.Payload='pl_mira.js';LoadPayload();}else if(Title.innerHTML=='Fan Control'){SS.ThisIsFanControl='1';SS.LastPage='files/FanControlLoader.html';Loader.innerHTML='<object type="text/html" data="files/FanControlLoader.html" style="width:265px; height:56px;"></object>';}else if(Title.innerHTML=='Info'){SS.ThisIsInfo='1';SS.LastPage='files/Info.html';ScrOverlay.style.opacity="1";ScrOverlay.style.display="block";ScrOverlay.innerHTML='<object type="text/html" data="files/Info.html" style="width:100%; height:100%;"></object>';}
 else if(SS.MainMenu==1&&MainMenu.children[SS.ItemNum-1].getAttribute('PL-Bin').includes('SUBMENU')){}
 else if(SS.MainMenu==1){SS.Payload=MainMenu.children[SS.ItemNum-1].getAttribute('PL-Bin');LoadPayload();}
 else if(SS.SubMenu==1){SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}}
