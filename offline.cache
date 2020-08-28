@@ -1,6 +1,6 @@
 CACHE MANIFEST 
-# Linux Loaders 
-# 23/08/2020-20:31:24.04 
+# Shaby Loaders 
+# 25/08/2020 
 
 index.html
 files/exploit.css
@@ -24,13 +24,14 @@ files/img/01.png
 files/img/01b.png
 files/img/PopUp.png
 files/img/10.jpg
-files/img/11.jpg
-files/img/12.jpg
-files/img/13.jpg
-files/img/14.jpg
-files/img/15.jpg
-files/img/16.jpg
-files/img/17.jpg
+files/img/10.png
+files/img/11.png
+files/img/12.png
+files/img/13.png
+files/img/14.png
+files/img/15.png
+files/img/16.png
+files/img/17.png
 files/img/BD.png
 files/img/BL.png
 files/img/CB.png
@@ -39,9 +40,11 @@ files/img/DU.png
 files/img/EU.png
 files/img/FanControl.png
 files/img/Flash.jpg
+files/img/Flash2.jpg
 files/img/ftp.png
 files/img/H.png
 files/img/hen.png
+files/img/hdd.png
 files/img/Kernel.png
 files/img/Linux.png
 files/img/linux.svg
@@ -55,6 +58,8 @@ files/img/SubBG.jpg
 files/img/SubBG2.jpg
 files/img/UA.png
 files/img/USB.png
+files/img/USB2.png
+files/img/info.png
 files/pl_updatesDisable.js
 files/pl_updatesEnable.js
 files/pl_kernelDumper.js
