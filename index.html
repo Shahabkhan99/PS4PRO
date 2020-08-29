@@ -268,20 +268,20 @@ UpdateTitle();},0);}
 function UNFocusSubMenu(){if(SS.SubMenu==1){SubMenu1.children[SM1z].className="Box2 Icon";SubMenu1Container.className="SubMenuContainer";SS.ItemNum=SM1n;}
 MenuContainer.className="MenuContainer2";SubTabA.className="SubTabTxtAnim";SubTabB.className="SubTabLineAnim";SS.SubMenu=0;if(SS.MainMenu==1){ChangeText(MainMenu.children[SS.ItemNum-1].getAttribute('PL-Title'));}else if(SS.SubMenu==1){ChangeText(SubMenu1.children[SM1z].getAttribute('PL-Title'));}}
 
-function LoadPayload(){Loader.innerHTML='<object type="text/html/js" data="exploit.js" style="width:263px; height:56px;"></object>';}
+function LoadPayload(){Loader.innerHTML='<object type="text/html" data="exploit.js" style="width:263px; height:56px;"></object>';}
 
 
 
 
-function loadPage(){SS.LastPage='exploit.js';if(Title.innerHTML=='Hen'){SS.ThisIsHen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+function loadPage(){SS.LastPage='exploit.js';if(Title.innerHTML=='Hen'){SS.ThisIsHen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Patch PS4 Kernel'){SS.ThisIsKernelPatch='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Patch PS4 Kernel'){SS.ThisIsKernelPatch='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Bin Loader'){SS.ThisIsBinLoader='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Bin Loader'){SS.ThisIsBinLoader='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Mira'){SS.ThisIsMira='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Mira'){SS.ThisIsMira='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Ren'){SS.ThisIsRen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira_ren.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Ren'){SS.ThisIsRen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira_ren.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
 else if(Title.innerHTML=='FTP'){SS.ThisIsFTP='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira_ren.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
