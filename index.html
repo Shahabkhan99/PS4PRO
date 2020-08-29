@@ -12,12 +12,12 @@
 <div id=Popup onclick="Popup.classList.remove('animation');"><div id="PopIcon"></div><div id="PopTitle"></div></div>
 <div id=BottomPopup></div>
 <div id=InfoButton><div id=R1BUTTON></div>= Show Payload Info</div>
-<!--<div id=AutoHenInfo><div id=L2BUTTON></div>- AutoHen</div>
-<div id=MenuContainer class=MenuContainer onclick=GetInfo()>
-<div id=MainMenu class=MenuPos> >  -->
+<div id=AutoHenInfo><div id=L2BUTTON></div>- AutoHen</div>
 
-<div id="SLIDE_BG"></div>     
 
+<!--<div id=MenuContainer class=MenuContainer onclick=GetInfo()>
+<div id=MainMenu class=MenuPos> >  
+<div id="SLIDE_BG"></div>     -->
 
 <!-- ==========Main Menu items=========== -->
 <div id=MenuContainer class=MenuContainer onclick=GetInfo()>
@@ -240,7 +240,7 @@ window.applicationCache.addEventListener("progress",DLProgress,false);window.app
 if(LS.CurrentTemp==null){LS.CurrentTemp=79;}
 if(RC('KernEpochDiff')==null){CC('KernEpochDiff',LS.KernEpochDiff,365);}
 if(RC('CurrentTemp')==null){CC('CurrentTemp',LS.CurrentTemp,365);}
-window.onunload=function(e){CC("CurrentTemp",LS.CurrentTemp,365);CC("KernEpochDiff",LS.KernEpochDiff,365);};var UA=navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (")+19,navigator.userAgent.indexOf(") Apple"));if(LS.TrueFW==null){if(UA=="5.05"||UA=="5.07"){LS.TrueFW=(Number(UA));}else{LS.TrueFW="Spoofed";}}
+window.onunload=function(e){CC("CurrentTemp",LS.CurrentTemp,365);CC("KernEpochDiff",LS.KernEpochDiff,365);};var UA=navigator.userAgent.substring(navigator.userAgent.indexOf("6.7 (")+19,navigator.userAgent.indexOf(") Apple"));if(LS.TrueFW==null){if(UA=="5.05"||UA=="6.72"){LS.TrueFW=(Number(UA));}else{LS.TrueFW="Spoofed";}}
 function ShowFirmwareVer(){OffFW.style.display='block';SpoFW.style.display='block';if(LS.TrueFW==null){if(UA=="5.05"||UA=="6.72"){LS.TrueFW=(Number(UA));OfficialFW=LS.TrueFW;}else{LS.TrueFW="Spoofed";OfficialFW=LS.TrueFW;}}else{OfficialFW=LS.TrueFW;}
 ReportedFW=UA;OfficialFW=LS.TrueFW;if(OfficialFW==ReportedFW){OffFW.innerHTML=("Official Firmware v"+OfficialFW+" detected");}else{OfficialFW=LS.TrueFW;OffFW.innerHTML=("Official Firmware: v"+OfficialFW);SpoFW.innerHTML=("Currently Spoofed To: v"+ReportedFW);}
 if(isNaN(ReportedFW)){OffFW.innerHTML=("NO PS4 DETECTED");}
@@ -273,15 +273,15 @@ function LoadPayload(){Loader.innerHTML='<object type="text/html/js" data="explo
 
 
 
-function loadPage(){SS.LastPage='exploit.js';if(Title.innerHTML=='Hen'){SS.ThisIsHen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+function loadPage(){SS.LastPage='exploit.js';if(Title.innerHTML=='Hen'){SS.ThisIsHen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Patch PS4 Kernel'){SS.ThisIsKernelPatch='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Patch PS4 Kernel'){SS.ThisIsKernelPatch='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Bin Loader'){SS.ThisIsBinLoader='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Bin Loader'){SS.ThisIsBinLoader='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Mira'){SS.ThisIsMira='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Mira'){SS.ThisIsMira='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
-else if(Title.innerHTML=='Ren'){SS.ThisIsRen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira_ren.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
+else if(Title.innerHTML=='Ren'){SS.ThisIsRen='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html/js" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira_ren.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
 else if(Title.innerHTML=='FTP'){SS.ThisIsFTP='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira_ren.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
@@ -347,4 +347,3 @@ else if(e.keyCode=='39'&&SS.InfoBox!=1&&SS.SubMenu==1&&SS.ItemNum-1>=MMtotal&&SS
 </script>
 </body>
 </html>
-
