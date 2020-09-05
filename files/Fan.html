@@ -1,0 +1,58 @@
+<html>
+<head> 
+<title></title>
+<link rel="stylesheet prefetch" href="./style2.css">
+</head>
+<body style="size:auto; height:auto; background:url('./img/10.jpg') no-repeat; background-size: cover; color:white;">
+<div style="text-align:center">
+
+<input autofocus="autofocus" type="range" id="NOUP" style="opacity:0;display:none;">
+<div id=SubTabA class=SubTabTxtAnim></div><div id=SubTabB class=SubTabLineAnim></div>
+<div id=Title1 class=Title1>Fan Threshold Menu</div>
+
+<button onclick="load_fanthresh(); return false" style="background-color:transparent; border-color:transparent">
+<img src="./img/FanControl.png" alt="text" style="height: 300px; width: 300px;" />
+<p style="color:white; font-size:18px">Ver. 4.0 - By Leeful<br> Set the desired temperature that the PS4 fan starts.<br>You can move the slider by using the D-Pad Up & Down or Left & Right.<br>The value you set will remain until the power is removed from the PS4. </p>
+<p style="color:white; font-size:20px"><b>The PS4's default temp is <mark>79&#176;C</mark></b></p>
+</button>
+
+<select id="tempC" style="height:35px; width:55px; font-size:25px; background-color:yellow; border-color:transparent"></select><mark>&#176;C</mark><br>
+<script>
+for(var i=40; i<=79; i++){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=69; 
+</script>
+
+
+
+<script src="./exp_common.js"></script>
+<script src="./exp_jailbreak.js"></script>
+
+<script>
+
+function load_fanthresh(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Fan Threshold ...</h1>";
+LoadedMSG="Fan Threshold Loaded ✔";fanTemp=tempC.value;//alert(fanTemp);
+var script = document.createElement('script');script.src = "pl_fanthresh.js";document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+}
+</script>
+
+
+<br>
+
+<img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%">
+
+<h1 id=msgs style='font-size:25px;text-align:center;'>6.72 Exploit Menu Lite</h1>
+
+<img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%"><img src="./img/ps4.png" alt="ps4" style="width:2%">
+
+
+</body>
+</html>
+
