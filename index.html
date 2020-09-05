@@ -1,4 +1,4 @@
-<html manifest="offline.cache">
+<html manifest="offline.cache"> 
 <head> 
 <title></title>
 <link rel="stylesheet prefetch" href="files/style2.css">
@@ -55,7 +55,7 @@
 
 ><div  PL-Title="App To USB"              PL-Bin onclick="load_app2usb(); return false"     PL-Ver="v1.0.0 - By Stooged"  PL-Desc="Unofficial external drive support for applications. Reads `app2usb.ini` from the external drive for options. The FTP port number is 1337." class="Box Icon"><img src="files/img/USB.png"></div
 
-><div PL-Title="Fan Control"      PL-Bin onclick="load_fanthresh(); return false"       PL-Ver="v4.0 - By Leeful"   PL-Desc="Set the desired temperature that the PS4 fan starts.<br>You can move the slider by using the D-Pad Up & Down or Left & Right.<br>The value you set will remain until the power is removed from the PS4.<br><br>The default PS4 setting is 79&#176;" class="Box Icon"><img src="files/img/FanControl.png"></div
+><div PL-Title="Fan Control"     PL-Bin onclick="window.location.href='./files/Fan.html'"       PL-Ver="v4.0 - By Leeful"   PL-Desc="Please wait loading...." class="Box Icon"><img src="files/img/FanControl.png"></div
 
 ><div PL-Title="Info"           PL-Bin="INFO"              PL-Ver=""             PL-Desc="Linux Info & Credits." class="Box Icon2"><img src="files/img/info.png"></div
 
@@ -218,13 +218,6 @@ var script = document.createElement('script');script.src = "./files/pl_dbRestore
 var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-function load_fanthresh(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Fan Threshold ...</h1>";
-LoadedMSG="Fan Threshold Loaded ✔";fanTemp=tempC.value;//alert(fanTemp);
-var script = document.createElement('script');script.src = "./files/pl_fanthresh.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "./files/exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-}
-
 </script>
 <div id="inf" style="text-align:center;opacity:0;z-index:9999999999;">2020 - Shaby</div>
 <script>
@@ -306,7 +299,6 @@ else if(Title.innerHTML=='WebRTE'){SS.ThisIsWR='1';SS.LastPage='files/Loader.htm
 else if(Title.innerHTML=='App To USB'){SS.ThisIsAU='1';SS.LastPage='files/Loader.html';Loader.innerHTML='<object type="text/html" data="files/Loader.html" style="width:265px; height:56px;"></object>';SS.Payload='.files/pl_mira_ren.js';SS.Payload=SubMenu1.children[SM1z].getAttribute('PL-Bin');LoadPayload();}
 
 
-else if(Title.innerHTML=='Fan Control'){SS.ThisIsFanControl='1';SS.LastPage='files/FanControlLoader.html';Loader.innerHTML='<object type="text/html" data="files/FanControlLoader.html" style="width:265px; height:56px;"></object>';}
 else if(Title.innerHTML=='Info'){SS.ThisIsInfo='1';SS.LastPage='files/Info.html';ScrOverlay.style.opacity="1";ScrOverlay.style.display="block";ScrOverlay.innerHTML='<object type="text/html" data="files/Info.html" style="width:100%; height:100%;"></object>';}
 
 
@@ -346,4 +338,5 @@ else if(e.keyCode=='37'&&SS.InfoBox!=1&&SS.SubMenu==1&&SS.ItemNum-1>MMtotal&&SS.
 else if(e.keyCode=='39'&&SS.InfoBox!=1&&SS.SubMenu==1&&SS.ItemNum-1>=MMtotal&&SS.ItemNum<SM1total){SS.SubMenu1ItemPos=parseInt(SS.SubMenu1ItemPos)-MoveMenu;SS.ItemNum=parseInt(SS.ItemNum)+1;UpdateMenu();}}
 </script>
 </body>
-</html> 
+</html>
+
